@@ -10,7 +10,7 @@ const AboutUs = () => {
             <h1 className="text-3xl font-bold my-3">Our Mission</h1>
             </div>
 
-            <div className=" col-span-4 md:col-span-2">
+            <div className=" col-span-6 md:col-span-4">
             <div className="color-white-500 block mb-10 text-1.1em">
                 
                 <p className='text-xl  text-bolder pt-7 pb-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum provident ratione beatae praesentium eius ipsa dignissimos. Sint natus dolor deleniti voluptas repellat officia sequi, voluptate quae assumenda consequatur, sed voluptatem!</p>
@@ -29,7 +29,7 @@ const AboutUs = () => {
             <h1 className="text-3xl  font-bold my-3">Our Vision</h1>
             </div>
 
-            <div className=" col-span-4 md:col-span-2">
+            <div className=" col-span-6 md:col-span-4">
             <div className="color-white-500 block mb-10 text-1.1em">
                 
                 <p className='text-xl  text-bolder pt-7 pb-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum provident ratione beatae praesentium eius ipsa dignissimos. Sint natus dolor deleniti voluptas repellat officia sequi, voluptate quae assumenda consequatur, sed voluptatem!</p>
