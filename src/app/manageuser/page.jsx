@@ -34,10 +34,10 @@ const ManageUser = () => {
                     {
                         userList.map((user)=>{
                             return <tr key={user._id} className='border border-blue-300'>
-                                <td>{user._id}</td>
-                                <td>{user.name}</td>
-                                <td>{user.email}</td>
-                                <td>{user.city}</td>
+                                <td className='p-3'>{user._id}</td>
+                                <td className='p-3'>{user.name}</td>
+                                <td className='p-3'>{user.email}</td>
+                                <td className='p-3'>{user.city}</td>
 
                             </tr>
                         })
