@@ -1,6 +1,8 @@
 'use client';
 import axios from 'axios'
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
+import toast from 'react-hot-toast';
 
 const ManageUser = () => {
 
@@ -17,6 +19,18 @@ const ManageUser = () => {
         fetchUsersData();
     }, []);
 
+    const deleteUser=(id)=>{
+        axios.delete('http://localhost:5000/user/delete/'+id)
+        .then((result) => {
+            toast.success('User Deleted Successfully');
+            fetchUsersData();
+        }).catch((err) => {
+            console.log(err);
+            toast.error('Failed to delete user');
+            
+            
+        });
+    }
      const displayUsers=()=>{
         if(userList.length === 0){
             return <p>Loading...Please Wait</p>
@@ -28,6 +42,7 @@ const ManageUser = () => {
                         <th className='p-3 text-lg'>Name</th>
                         <th className='p-3 text-lg'>Email</th>
                         <th className='p-3 text-lg'>City</th>
+                        <th colspan={2}>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,6 +53,15 @@ const ManageUser = () => {
                                 <td className='p-3'>{user.name}</td>
                                 <td className='p-3'>{user.email}</td>
                                 <td className='p-3'>{user.city}</td>
+                                
+
+                                <td>
+                                    <button
+                                     onClick={()=>{deleteUser(user._id)}} className='px-3 py-1 bg-red-500 rounded-full text-white'>Delete</button>
+                                </td>
+                                <td>
+                                    <Link href={'/updateuser/'+user._id} className='px-3 py-1 bg-blue-500 rounded-full text-white'>Edit</Link>
+                                </td>
 
                             </tr>
                         })
