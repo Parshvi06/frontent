@@ -24,7 +24,7 @@ const SignupSchema = Yup.object().shape({
 
 const Signup = () => {
 
-   const signupForm = useFormik({ 
+   const  signupForm = useFormik({ 
     initialValues:{
       name:'',
       email:'',
